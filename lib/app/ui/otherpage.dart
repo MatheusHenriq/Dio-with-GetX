@@ -14,20 +14,6 @@ class OtherPage extends GetView<OtherController> {
       ),
       body: Column(
         children: [
-          InkWell(
-            onTap: () => Get.off(
-              HomePage(),
-              binding: HomeBindings(),
-            ),
-            child: Container(
-              width: 70,
-              height: 43,
-              color: Colors.pink,
-              child: Center(
-                child: Text('Get Back'),
-              ),
-            ),
-          ),
           Center(
             child: InkWell(
               onTap: () => controller.increment(),

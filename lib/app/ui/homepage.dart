@@ -10,10 +10,6 @@ class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Get.to(OtherPage(), binding: OtherBindings()),
-        child: Icon(Icons.ac_unit),
-      ),
       appBar: AppBar(
         title: Text('API Consumer'),
       ),
@@ -24,7 +20,17 @@ class HomePage extends GetView<HomeController> {
             ListTile(
               title: Text(state[0].name),
               subtitle: Text('${state[0].email}'),
-            )
+            ),
+            MaterialButton(
+              onPressed: () => Get.to(OtherPage(), binding: OtherBindings()),
+              textColor: Colors.red,
+              child: Container(
+                color: Colors.green,
+                height: 43,
+                width: 150,
+                child: Center(child: Text('Go to OTHER page')),
+              ),
+            ),
           ],
         );
       }),
